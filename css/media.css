@@ -11,7 +11,7 @@
     .footer>.container,
     .team>.container,
     .customers>.container {
-        max-width: 582px;
+        max-width: 584px;
     }
     .header-logo {
         margin-right: 120px ;
@@ -83,7 +83,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .box {
+    .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-tab-2x.jpg);
     }
     }
@@ -139,15 +139,18 @@
     }
     .subscribe-input {
         width: 264px;
+        margin-bottom: 0;
     }
-    .subscribe-btn-container {
-        display: block;
+    .subscribe-btn {
+        margin: 0;
     }
 }
 
 @media screen and (min-width: 1158px) {
     .container {
         max-width: 1158px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     .team>.container,
     .customers>.container,
@@ -171,6 +174,7 @@
     }
     /* ----------------------- MAIN --------------------- */
     .hero {
+        max-width: 1440px;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg.jpg);
         padding-top: 188px;
         padding-bottom: 188px;
@@ -178,7 +182,7 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        .box {
+        .hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-2x.jpg);
         }
     }

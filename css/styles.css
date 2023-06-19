@@ -52,8 +52,8 @@ ul, ol {
 }
 .container {
     width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
     margin: 0 auto;
 }
 /* ----------------------- HEADER --------------------- */
@@ -89,8 +89,6 @@ ul, ol {
     display: none;
 }
 .menu-open-btn { 
-    width: 32px;
-    height: 22px;
     background-color: transparent;
     border: none;
     margin-left: auto;
@@ -114,16 +112,17 @@ ul, ol {
     width: 100vw;
     height: 100vh;
     background-color: var(--white-color);
-    padding: 24px 24px 40px 40px;
+    padding: 80px 24px 40px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: auto;
 }
 .menu-close-btn {
-    display: block;
+    position: absolute;
+    top: 24px;
+    right: 24px;
     margin-left: auto;
-    margin-bottom: 32px;
     width: 24px;
     height: 24px;
     background: rgba(231, 233, 252, 0.1);
@@ -147,11 +146,21 @@ ul, ol {
     text-transform: capitalize;
     color: var(--navy-blue-color);
 }
+.menu-link-after {
+    color: var(--ocean-color);
+    transition: color var(--transition);
+}
 .mob-menu-address {
     font-style: normal;
     margin-bottom: 48px;
 }
-.mob-menu-address-link {
+.mob-menu-address-link-t {
+    color: var(--iris-color);
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+}
+.mob-menu-address-link-e {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
@@ -160,13 +169,6 @@ ul, ol {
 }
 .mob-menu-address-item:not(:last-child) {
     margin-bottom: 48px;
-}
-.mob-menu-address-link:focus {
-    color: var(--iris-color);
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    transition: color var(--transition);
 }
 .mob-soc-list {
     display: flex;
@@ -216,7 +218,7 @@ ul, ol {
 @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .box {
+    .hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero-bg-mob-2x.jpg);
     }
 }
@@ -531,15 +533,12 @@ ul, ol {
     color: var(--white-color);
     padding: 8px 24px;
     cursor: pointer;
+    margin: 0 auto;
 }
 .subscribe-btn:hover,
 .subscribe-btn:focus {
     background-color: var(--ocean-color);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.subscribe-btn-container {
-    display: flex;
-    justify-content: center;
 }
 .subscribe-icon {
     margin-left: 16px;
